@@ -1,7 +1,7 @@
 FROM python:3.7
 MAINTAINER Juliano Lazzarotto "jl.br.nh@gmail.com"
 
-RUN apt-get update \
+RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update \
     && apt-get install -y \
         build-essential \
         cmake \
